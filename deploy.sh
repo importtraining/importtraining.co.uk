@@ -2,6 +2,8 @@
 
 set -e
 
+REPO_URL=git@github.com:importtraining/importtraining.co.uk.git
+
 # Remove output directory and replace it with the current tip of the gh-pages
 # branch.
 rm -rf output
@@ -14,7 +16,7 @@ make build
 cd output
 git add .
 git commit -m "Auto-commit.  Built latest changes."
-git push git@github.com:importtraining/importtraining.co.uk.git gh-pages
+git push $REPO_URL gh-pages
 
 # Clean up.
 rm -rf .git
