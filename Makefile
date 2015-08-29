@@ -1,4 +1,4 @@
-.PHONY: help build serve test deploy
+.PHONY: help build serve test deploy sass
 
 help:
 	@echo 'Makefile for importtraining.co.uk'
@@ -8,6 +8,7 @@ help:
 	@echo '   make serve    build the site and serve on port 8000, watching for changes'
 	@echo '   make test     test that site builds, has no broken links, and spells the conference name correctly'
 	@echo '   make deploy   deploy the site'
+	@echo '   make css      generate CSS from SCSS'
 	@echo ''
 
 build:
@@ -21,3 +22,6 @@ test:
 
 deploy:
 	./deploy.sh
+
+css:
+	sass resources/sass/style.scss media/static/css/style.css

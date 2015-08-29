@@ -1,0 +1,71 @@
+// Header demo styles
+// ---------------------------------------
+
+body {
+    padding-top: 4em;
+}
+.head {
+    display: block;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    //border-bottom: 1px solid $grey;
+    z-index: 100;
+    box-shadow: 0 0 3px rgba(0,0,0,.15);
+}
+
+.nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+        float: left;
+        margin: 1em 2rem;
+
+        a {
+            display: block;
+            width: 320px;
+            height: 43px;
+            background: url(../img/training_logo_mark.png) top left no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+            text-indent: -100em;
+        }
+    }
+    ul {
+        float: right;
+        margin-top:1rem;
+        margin-right: 2rem;
+        @media all and (max-width:900px) {
+            display: none;
+        }
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: block;
+            border: 1px solid white;
+            font-size: 0.75em;
+            padding: 0.25em 1em;
+            font-weight: bold;
+            text-transform: lowercase;
+            color: $bodyColour;
+            font-family: unquote(map-get($headingtype, font-family));
+            &:hover {
+                color: $linkColour;
+            }
+            &.box {
+                color: $linkColour;
+                border: 1px solid $linkColour;
+                &:hover {
+                    background: $linkColour;
+                    color: white;
+                }
+            }
+        }
+    }
+}
