@@ -755,6 +755,11 @@ body {
     .global-footer p {
       font-size: 0.92632rem; } }
 
+table.course-table {
+  margin-left: 60px; }
+  table.course-table th {
+    padding-right: 60px; }
+
 #baseline.show-grid {
   background-image: -webkit-linear-gradient(top, cyan 0, rgba(255, 255, 255, 0) 1px);
   background-image: -moz-linear-gradient(top, cyan 0, rgba(255, 255, 255, 0) 1px);
